@@ -1,0 +1,92 @@
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding: 2rem; */
+}
+
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border: 2px solid transparent;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: border 0.2s ease;
+}
+
+.active {
+  border-color: #007acc;
+}
+
+.galleryItem {
+  text-align: center;
+  /* padding: 2rem; */
+}
+
+.imageWrapper {
+  max-width: 800px;
+  margin: 0 auto 1rem;
+}
+
+.galleryImage {
+  width: 100%;
+  height: 500px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.modalContent {
+  background-color: #a0ee22;
+  padding: 1rem;
+  border-radius: 8px;
+  /* width: auto;
+  height: auto;
+  max-width: 100vw;
+  max-height: 100vh; */
+  overflow: auto;
+  /* position: relative; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalImage {
+  /* max-width: auto;
+  max-height: auto; */
+  /* object-fit: contain; */
+  transition: transform 0.2s ease;
+}
+
+.closeButton {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+}
